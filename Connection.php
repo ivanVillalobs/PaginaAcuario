@@ -1,14 +1,14 @@
 <?php
 $SERVER = "localhost";
 $database = "acuario";
-$username = "ivan";
-$password = "";
+$username = "root";
+$password = "root";
 
-$con=mysqli_connect ($SERVER,$username,$password,$database);
+// Establecer la conexión
+$con = mysqli_connect($SERVER, $username, $password, $database);
 
-/*if(!$con){
-    echo "Ocurrio un error";
-}else{
-    echo "Bienvenido";
-}*/
+// Verificar la conexión
+if (!$con) {
+    die("Error de conexión: " . mysqli_connect_error());
+}
 ?>

@@ -169,3 +169,89 @@ main{
         position: relative;
     }
 }
+
+
+
+.password-container {
+    position: relative;
+    margin-bottom: 15px; /* Espacio entre los campos */
+}
+
+.password-container input {
+    width: 100%; /* Asegura que el campo de texto ocupe todo el ancho */
+    padding-right: 30px; /* Espacio a la derecha para el ícono */
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Espacio del lado derecho */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+    cursor: pointer;
+    font-size: 20px; /* Tamaño del ícono */
+    z-index: 1; /* Asegura que el ícono esté por encima del campo */
+}
+
+.password-container {
+    position: relative;
+    color: white;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Ajusta el valor según tu diseño */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+/* Estilos generales para los campos de texto */
+.input-container {
+    position: relative;
+    width: 100%; /* Asegura que ocupe el ancho completo */
+}
+
+.input-container input {
+    width: 100%; /* Asegura que el input ocupe el ancho completo */
+    padding-right: 40px; /* Espacio para el ícono */
+    box-sizing: border-box; /* Para incluir padding en el ancho */
+}
+
+/* Estilo para el ícono del ojo */
+.input-container img {
+    position: absolute;
+    right: 10px; /* Coloca el ícono a la derecha */
+    top: 50%; /* Centra verticalmente el ícono */
+    transform: translateY(-50%); /* Ajusta el centrado vertical */
+    cursor: pointer;
+    width: 24px; /* Ajusta el tamaño del ícono */
+    height: 24px;
+}
+
+
+.forgot-password-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password-text a {
+    color: white; /* Cambia el color del enlace a blanco */
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    font-family: 'Roboto', sans-serif; /* O cualquier otra fuente que prefieras */
+}
+
+.forgot-password-text a:hover {
+    text-decoration: underline; /* Opcional: agrega subrayado al pasar el mouse */
+    color: white; /* Asegura que el color se mantenga blanco en hover */
+}
+
+.forgot-password-text a:visited {
+    color: white; /* Asegura que el color no cambie después de haber hecho clic */
+}
+
+.forgot-password-text a:focus {
+    outline: none; /* Elimina el borde alrededor del enlace al enfocarlo */
+    color: white; /* Mantén el color blanco cuando esté enfocado */
+}

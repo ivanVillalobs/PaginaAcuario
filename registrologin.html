@@ -4,58 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN Y register</title>
+    <title>LOGIN Y Register</title>
     <link rel="stylesheet" href="Formulario.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Kaushan+Script&display=swap" rel="stylesheet">
-    <link rel = "preconnect" href = "https://fonts.gstatic.com">
-<link href = "https://fonts.googleapis.com/css2? family = Roboto: wght @ 100 & display = swap" rel = "hoja de estilo">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-
     <main>
-
         <div class="contenedor__todo">
-
             <div class="caja__trasera">
                 <div class="caja__trasera_login">
-                    <h3>¿ya tienes una cuenta?</h3>
-                    <p>Inicia Sesión para entrar a la pagina</p>
-                    <button id="btn__iniciar-sesion">Iniciar Sesion</button> 
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia Sesión para entrar a la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button> 
                 </div>
                 <div class="caja__trasera_register">
-                    <h3>¿Aun no tienes una cuenta?</h3>
-                    <p>Registrate para entrar a la pagina</p>
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para entrar a la página</p>
                     <button id="btn__Register">Registrar</button> 
                 </div>
             </div>
-            <img src="" alt="">
             <div class="contenedor__login__register">
                 <form action="login.php" method="POST" class="formulario__login">
-                    <h2>Iniciar Sesion</h2>
-                    <input type="text" placeholder="Correo Electronico" required name="correo">
-                    <input type="password" placeholder="Contraseña" required name="contrasena">
-                    <button>Entrar</button>
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" placeholder="Correo Electrónico" required name="correo">
+                    <div class="input-container">
+                        <input type="password" id="loginContrasena" placeholder="Contraseña" name="contrasena">
+                        <img src="IMG/ojoC.png" id="toggleLoginPassword" alt="Mostrar/Ocultar contraseña">
+                    </div>
+                    
+                    <button type="submit">Entrar</button>
+                
+                    <!-- Enlace para recuperar la contraseña -->
+                    <p class="forgot-password-text">
+                        <a href="recuperarcontra.html">¿Olvidaste tu contraseña?</a>
+                    </p>
                 </form>
-
+                
+                
+                
                 <form action="registro.php" method="POST" class="formulario__register">
                     <h2>Registrarse</h2>
                     <input type="text" placeholder="Nombre" name="nombre" required>
-                    <input type="text" placeholder="Apellido paterno" name="ApellidoP" required>
-                    <input type="text" placeholder="Apellido materno" name="ApellidoM" required>
-                    <input type="correo" placeholder="correo" name="correo" required>
-                    <input type="password" placeholder="contrasena" name="contrasena" required>
-                    <input type="text" placeholder="telefono" name="telefono" required>
-                    <input type="text" placeholder="direccion" name="direccion" required>
-                    <button>Registrarse</button>
+                    <input type="text" placeholder="Apellido Paterno" name="ApellidoP" required>
+                    <input type="text" placeholder="Apellido Materno" name="ApellidoM" required>
+                    <input type="email" placeholder="Correo" name="correo" required>
+                    
+                    <div class="password-container">
+                        <input type="password" id="contrasenaRegistro" placeholder="Contraseña" name="contrasena" required>
+                        <img src="IMG/ojoC.png" alt="Ver Contraseña" id="togglePassword" class="eye-icon">
+                    </div>
+                    <div class="password-container">
+                        <input type="password" id="contrasenaConfirm" placeholder="Confirma Contraseña" name="contrasenaConfirm" required>
+                        <img src="IMG/ojoC.png" alt="Ver Contraseña" id="togglePasswordConfirm" class="eye-icon">
+                    </div>
+
+                    <input type="text" placeholder="Teléfono" name="telefono" required>
+                    <input type="text" placeholder="Dirección" name="direccion" required>
+                    <button type="submit">Registrarse</button>
                 </form>
-
             </div>
-
         </div>
-
     </main>
     <script src="Formulario.js"></script>
 </body>

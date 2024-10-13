@@ -10,51 +10,38 @@ if(!$con){
 $correo = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
 
-$resultado = mysqli_query ($con,"SELECT *FROM usuarios WHERE correo = '$correo' AND contrasena = '$contrasena';");
+// Obtener el usuario por correo
+$resultado = mysqli_query($con, "SELECT * FROM usuarios WHERE correo = '$correo'");
 
+if (mysqli_num_rows($resultado) == 1) {
+    // Obtener el registro del usuario
+    $usuario = mysqli_fetch_array($resultado);
+    
+    // Verificar la contraseña
+    if (password_verify($contrasena, $usuario['Contrasena'])) {
+        // La contraseña es correcta
 
-if(mysqli_num_rows($resultado)==1){    
-
-    if($correo=='ivanovicas@hotmail.com' && $contrasena=='ivanoe123' or $correo=='administrador@gmail.com' && $contrasena=='adminroot'){
-
-        $usuario = mysqli_fetch_array($resultado);
-        $_SESSION['id_usuario'] = $usuario['ID']; // Guardar el ID de usuario en una variable de sesión
-        echo "Bienvenido ".$correo;
-        header("location: pro/mostrarProductosADMIN.php");
-
-    }else{
-        $usuario = mysqli_fetch_array($resultado);
-        $_SESSION['id_usuario'] = $usuario['ID']; // Guardar el ID de usuario en una variable de sesión
-        $Nombre = $usuario['Nombre'];
-        $_SESSION['Nombre'] = $Nombre;
-
-        // $NumeroTelefonico = $NumeroTelefonico['NumeroTelefonico'];    
-        $NumeroTelefonico = $usuario['telefono'];
-        $_SESSION['telefono'] = $NumeroTelefonico;
-
-        //$CorreoEletronico = $CorreoEletronico['CorreoEletronico'];
+        // Guarda la información del usuario en la sesión
+        $_SESSION['id_usuario'] = $usuario['ID'];
+        $_SESSION['Nombre'] = $usuario['Nombre'];
+        $_SESSION['telefono'] = $usuario['telefono'];
         $_SESSION['correo'] = $correo;
-        
 
-        echo "Bienvenido ".$correo;
-        header("location: Indexprod.php");
+        // Redirige al usuario según su tipo de cuenta
+        if ($correo == 'ivanovicas@hotmail.com' && $contrasena == 'ivanoe123' || 
+            $correo == 'administrador@gmail.com' && $contrasena == 'adminroot') {
+            header("location: pro/mostrarProductosADMIN.php");
+        } else {
+            header("location: Indexprod.php");
+        }
 
+        echo "Bienvenido " . $correo; // Mensaje de bienvenida
+    } else {
+        // La contraseña es incorrecta
+        echo "Contraseña incorrecta. Inténtalo de nuevo.";
     }
-
-}else{
-    echo "adios";
+} else {
+    // El correo no existe
+    echo "Correo no encontrado.";
 }
-
-/*
-if($nr == 1){
-    $usuario = mysqli_fetch_array($resultado); // El usuario se autenticó correctamente
-    $_SESSION['id_usuario'] = $usuario['ID']; // Guardar el ID de usuario en una variable de sesión
-    header("location: indexprod.php");
-    echo "Bienvenido ".$CorreoEletronico;
-}
-else if($nr == 0){
-    // El usuario no se autenticó correctamente
-    echo "No ingreso usuario, vuelvalo a intentar";
-}
-*/
 ?>

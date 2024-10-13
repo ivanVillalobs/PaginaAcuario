@@ -107,8 +107,10 @@
                     }
                     $_SESSION["productos"]=json_encode($array);
                     ?>
-                        <form action="enviarcorreo.php">
+                        <form action="enviarcorreo.php" method="get">
+                                <form action="PDF/index_webdab.php">
                                 <button class="delete1" onclick="alert('Compra exitosa');">Comprar carrito</button>
+                                </form>
                                 <!--href="DeleteCarrito.php?id_Usuario=<?php //echo $row['id_Usuario']; ?>"-->
                                 <!--<input type="submit"value ="Comprar carrito">-->                            
                         </form>
