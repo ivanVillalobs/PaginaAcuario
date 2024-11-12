@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-image: url(../imagenes/a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #cce2e4;
+}
+main{
+    width: 100%;
+    padding: 20px;    
+    margin: auto;
+    margin-top: 100px;
+}
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+.caja__trasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(176, 176, 176, 0.5);
+}
+.caja__trasera div{
+    margin: 100px 40px;
+    color: #211D1D;
+    transition: all 500ms;
+}
+.caja__trasera div p,
+.caja__trasera div button{
+    margin-top: 30px;
+}
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 2px solid #FEFFFF;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    outline: none;
+    transition: all 300ms;
+}
+.caja__trasera button:hover{
+    background: #575757;
+    color: #fff;
+}
+/*Formurarios*/
+.contenedor__login__register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    font-family: 'Jacques Francois Shadow';
+
+    transition: left 500ms cubic-bezier(0.175, 0.885,0.320,1.275);
+}
+.contenedor__login__register form{
+    width: 100%;
+    padding: 80px 20px;
+    background: #006750;/*Color del fondo del formulario*/
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor__login__register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.contenedor__login__register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none; 
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor__login__register form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #fff;
+    color: black;
+    cursor: pointer;
+    outline: none;
+}
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+.formulario__register{
+    display: none;
+
+}
+.nav {
+    background-color: #006750;
+    width: 100%;
+    height: 100px;
+}
+.nav ul{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    word-spacing: 5em;
+}
+.nav ul li{
+    display: inline;
+}
+.nav ul li a{
+    position: relative;
+    color: white;
+    font-family:'Lucida Sans Unicode';
+    text-decoration: none;
+    top: 30%;
+}
+.nav ul li a:hover{
+    background-color: grey;
+    transition: 500ms;
+    font-size: 20px;
+}
+/*responsive*/
+
+@media screen and (max-width: 850px){
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja__trasera div{
+        margin: 0;
+        position: absolute;        
+    }
+    /*formulario*/
+    .contenedor__login__register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+    .contenedor__login__register form{
+        position: relative;
+    }
+}
+
+
+
+.password-container {
+    position: relative;
+    margin-bottom: 15px; /* Espacio entre los campos */
+}
+
+.password-container input {
+    width: 100%; /* Asegura que el campo de texto ocupe todo el ancho */
+    padding-right: 30px; /* Espacio a la derecha para el ícono */
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Espacio del lado derecho */
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+    cursor: pointer;
+    font-size: 20px; /* Tamaño del ícono */
+    z-index: 1; /* Asegura que el ícono esté por encima del campo */
+}
+
+.password-container {
+    position: relative;
+    color: white;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Ajusta el valor según tu diseño */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+/* Estilos generales para los campos de texto */
+.input-container {
+    position: relative;
+    width: 100%; /* Asegura que ocupe el ancho completo */
+}
+
+.input-container input {
+    width: 100%; /* Asegura que el input ocupe el ancho completo */
+    padding-right: 40px; /* Espacio para el ícono */
+    box-sizing: border-box; /* Para incluir padding en el ancho */
+}
+
+/* Estilo para el ícono del ojo */
+.input-container img {
+    position: absolute;
+    right: 10px; /* Coloca el ícono a la derecha */
+    top: 50%; /* Centra verticalmente el ícono */
+    transform: translateY(-50%); /* Ajusta el centrado vertical */
+    cursor: pointer;
+    width: 24px; /* Ajusta el tamaño del ícono */
+    height: 24px;
+}
+
+
+.forgot-password-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password-text a {
+    color: white; /* Cambia el color del enlace a blanco */
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    font-family: 'Roboto', sans-serif; /* O cualquier otra fuente que prefieras */
+}
+
+.forgot-password-text a:hover {
+    text-decoration: underline; /* Opcional: agrega subrayado al pasar el mouse */
+    color: white; /* Asegura que el color se mantenga blanco en hover */
+}
+
+.forgot-password-text a:visited {
+    color: white; /* Asegura que el color no cambie después de haber hecho clic */
+}
+
+.forgot-password-text a:focus {
+    outline: none; /* Elimina el borde alrededor del enlace al enfocarlo */
+    color: white; /* Mantén el color blanco cuando esté enfocado */
+}

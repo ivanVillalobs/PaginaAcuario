@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #cce2e4;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.swiper-slide {
+    padding: 0 80px 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-prev::after {
+    font-size: 25px;
+}
+
+.swiper-button-next::after {
+    font-size: 25px;
+}
+
+.swiper-button-prev {
+    color: #FEFFFF;
+}
+
+.swiper-button-next {
+    color: #FEFFFF;
+}
+
+.swiper-pagination-bullet {
+    background-color: #747474;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #008876;  /*#7270EC*/
+    /*cambiar*/
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    color: #008876;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FEFFFF;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #008876;
+    /*cambiar*/
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+.footer{
+    display: flex;
+    padding: 30px 0;
+}
+.link {
+    width: 20%;
+}
+.link h3{
+    color: #FEFFFF;
+    margin-bottom: 20px;
+}
+.link a{
+    color: #747B8F;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+.link p{
+    color: #747474;
+    font-size: 16px;
+}
+.map{
+    top: 100%;
+    width: 100%;
+}
+.mapa{
+    text-align: center;
+
+}
+.InventarioConsulta{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.Carrito{
+    background-color: #005452;
+    color: #FEFFFF;
+}
+.Crto{
+    padding: 10px 25px;
+    margin-top: 40px;
+}
+.Crto a{
+    background-color: #005452;
+    color: #FEFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+.Crto a:hover{
+    transition: .35s;
+    background-color: #329542;
+}
+th{
+    background-color: #008876;
+    color: #FEFFFF;
+    width: 10%;
+}
+td{
+    background-color: #a4c9bb;
+    text-align: center;
+    padding: 10px 25px;
+}
+.delete{
+    background-color: #008876;
+    color: #FEFFFF;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-top: 40px;
+
+    /*background-color: #005452;
+    text-decoration: none;
+    color: white;
+    font-size:20px;
+    width:80px;
+    height:19px;
+    border-radius: 30%;*/
+}
+.delete1{
+    background-color: #008876;
+    color: #FEFFFF;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+.deletemod{
+    background-color: #008876;
+    color: #FEFFFF;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+.delete:hover{
+    transition: .35s;
+    background-color: red;
+}
+.delete1:hover{
+    transition: .35s;
+    background-color: blue;
+}
+.deletemod:hover{
+    transition: .35s;
+    background-color: #329542;
+}
+.acerca{
+    width: 100%;
+    height: 100vh;
+    background-color: #024d3f;/*cambiar*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acerca .contenido img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+}
+.texto{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.contenido{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.texto h1{
+    color: white;
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.texto h5{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.texto p{
+    color: #c0c4d6;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3b3b3b;/*cambiar*/
+        display: none;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+    .logo{
+        display: none;
+    }
+    .submenu:hover #carrito{
+        min-width: 100%;
+    }
+    .mySwiper-1{
+        width: 300px;
+    }
+    .swiper-slide{
+        padding: 0 30px 50px 30px;
+    }
+    .header-content{
+        padding: 100px 0 50px 0;
+    }
+    .header-info{
+        padding: 0; 
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-txt{
+        width: 100%;
+    }
+    .header-txt h1{
+        font-size: 40px;        
+    } 
+    .header-img{
+        width: 100%;
+    }
+    .header-img img{
+        width: 200px;
+    }
+    .prices{
+        flex-direction: column;
+    }
+    .prices-1{
+        margin: 0;
+    }
+    .btn-1{
+        margin: 20px 0;
+    }
+
+    .promos{
+        padding: 30px;
+    }
+    .promos h2{
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    .categories{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .categoria{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .categoria-1{
+        width: 100px;
+        margin-bottom: 25px;
+        order: -1;
+    }
+    .categoria-img{
+        width: 100%;
+    }
+    .products{
+        padding: 30px;
+    }
+    .products h2{
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .link{
+        width: 100%;
+    }
+
+}

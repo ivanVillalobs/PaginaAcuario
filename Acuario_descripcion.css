@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+.acerca{
+    width: 100%;
+    height: 100vh;
+    background-color: #024d3f;/*cambiar*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acerca .contenido img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+}
+.texto{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.contenido{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.texto h1{
+    color: white;
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.texto h5{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.texto p{
+    color: #c0c4d6;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+.barra{
+    word-spacing: 1em;
+    background-color: aqua;
+    border: solid aquamarine;
+    width: 100%;
+    height: 1.5em;
+    list-style-type: none;
+    text-align: center;
+}
+.barra li{
+    font-weight: bold;
+    color: black;
+    display: inline;
+    top: 0%;
+    bottom: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer{
+    background-color: aqua;
+    width: 100%;
+    height: 5em;
+    bottom: 0%;
+}
+.nav {
+    background-color: #B3D0E1;
+    width: 100%;
+    height: 5em;
+}
+.nav ul{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    word-spacing: 5em;
+}
+.nav ul li{
+    display: inline;
+}
+.nav ul li a{
+    position: relative;
+    color: white;
+    font-family:'Lucida Sans Unicode';
+    text-decoration: none;
+    top: 30%;
+}
+.nav ul li a:hover{
+    background-color: grey;
+    transition: 500ms;
+    font-size: 20px;
+}
+@media screen and (max-width: 1180px){
+    .acerca{
+        width: 100%;
+        height: auto;
+        padding: 70px;
+    }
+
+}
+@media screen and (max-width: 650px){
+    .acerca .contenido img{
+        margin-bottom: 35px;
+    }
+    .texto h1{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+
+}
