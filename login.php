@@ -3,8 +3,8 @@ session_start();
 
 include "Connection.php";
 
-if(!$con){
-    die("No hay conexion".mysqli_connect_error());
+if (!$con) {
+    die("No hay conexión: " . mysqli_connect_error());
 }
 
 $correo = $_POST['correo'];
@@ -27,15 +27,15 @@ if (mysqli_num_rows($resultado) == 1) {
         $_SESSION['telefono'] = $usuario['telefono'];
         $_SESSION['correo'] = $correo;
 
-        // Redirige al usuario según su tipo de cuenta
-        if ($correo == 'ivanovicas@hotmail.com' && $contrasena == 'ivanoe123' || 
-            $correo == 'administrador@gmail.com' && $contrasena == 'adminroot') {
-            header("location: pro/mostrarProductosADMIN.php");
-        } else {
-            header("location: Indexprod.php");
+        // Redirige al usuario según su PerfilID
+        if ($usuario['PerfilID'] == 1) {
+            header("Location: pro/mostrarProductosADMIN.php");
+        } elseif ($usuario['PerfilID'] == 2) {
+            header("Location: Indexprod.php");
         }
+        
+        exit(); // Finaliza el script después de la redirección
 
-        echo "Bienvenido " . $correo; // Mensaje de bienvenida
     } else {
         // La contraseña es incorrecta
         echo "Contraseña incorrecta. Inténtalo de nuevo.";
